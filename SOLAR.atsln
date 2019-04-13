@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "SOLAR", "SOLAR\SOLAR.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "servo_test", "servo_test\servo_test.cppproj", "{C3BC3309-453B-4B3C-80A7-31A7DAD69E3B}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Debug", "Debug\Debug.cppproj", "{7EE2AC1B-9A76-4BA2-92EF-20B541CF9B15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.Build.0 = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.ActiveCfg = Release|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.Build.0 = Release|AVR
+		{C3BC3309-453B-4B3C-80A7-31A7DAD69E3B}.Debug|AVR.ActiveCfg = Debug|AVR
+		{C3BC3309-453B-4B3C-80A7-31A7DAD69E3B}.Debug|AVR.Build.0 = Debug|AVR
+		{C3BC3309-453B-4B3C-80A7-31A7DAD69E3B}.Release|AVR.ActiveCfg = Release|AVR
+		{C3BC3309-453B-4B3C-80A7-31A7DAD69E3B}.Release|AVR.Build.0 = Release|AVR
+		{7EE2AC1B-9A76-4BA2-92EF-20B541CF9B15}.Debug|AVR.ActiveCfg = Debug|AVR
+		{7EE2AC1B-9A76-4BA2-92EF-20B541CF9B15}.Debug|AVR.Build.0 = Debug|AVR
+		{7EE2AC1B-9A76-4BA2-92EF-20B541CF9B15}.Release|AVR.ActiveCfg = Release|AVR
+		{7EE2AC1B-9A76-4BA2-92EF-20B541CF9B15}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
