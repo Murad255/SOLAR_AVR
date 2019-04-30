@@ -12,7 +12,7 @@
 //	RESET	-## ##- VCC
 //	ADC2	-#####-			SCK
 //	ADC3	-#####- PB1		MISO
-//		GND	-#####- PB0		MOSI
+//	GND		-#####- PB0		MOSI
 ////////////////////////////////////
 
 
@@ -23,7 +23,15 @@
 #include "libSol/watcdog.h"
 
 //#define DEBUG_SALAR 
-
+#define  LEFT	digitalWrite(pin_A,0); \
+				digitalWrite(pin_B,1);
+				
+#define  RIGHT	digitalWrite(pin_A,1); \
+				digitalWrite(pin_B,0);		
+				
+#define  STOP	digitalWrite(pin_A,0); \
+				digitalWrite(pin_B,0);						
+				
 
 typedef unsigned char byte;
 #define pin_A 0
@@ -57,19 +65,11 @@ int main(void)
 	
 	while(1)
 	{
-	   int val1 = analogRead(2); 
-	   int val2 = analogRead(3); 
-	if((val1-val2)>gist/2){
-		digitalWrite(pin_A,0);
-		digitalWrite(pin_B,1);
-	  }
-	else if((val2-val1)>gist/2){
-		digitalWrite(pin_A,1);
-		digitalWrite(pin_B,0);
-	  }
-	   else {
-		digitalWrite(pin_A,0);
-		digitalWrite(pin_B,0);
-		}
+		LEFT
+		delay(2000);
+		RIGHT
+		delay(2000);
+		STOP
+		delay(500);
 	}
 }

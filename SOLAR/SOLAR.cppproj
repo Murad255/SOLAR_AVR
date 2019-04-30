@@ -173,6 +173,9 @@
     <Compile Include="libSol\ADC.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="libSol\watcdog.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>

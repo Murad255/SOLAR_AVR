@@ -37,8 +37,8 @@ volatile unsigned long int cikle;
 		return cikle;} 
 
 	void wBegin(){	
-		WDTCSR |= 1 << WDCE;
-		WDTCSR |= 0b01000000; // 1 переполнение -- 16 мс
+		WDTCR|=//WDTCSR |= 1 << WDCE;
+		WDTCR |= 0b01000000; // 1 переполнение -- 16 мс
 		sei();
 		}
 
