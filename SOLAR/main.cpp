@@ -20,16 +20,10 @@
 #include <avr/io.h> //подключение стандартной библиотеки ввода/вывода
 #include <avr/interrupt.h> //подключаем библиотеку работы с прерываниями
 #include "libSol/ADC.h"
+#include "libSol/watcdog.h"
 
 //#define DEBUG_SALAR 
 
-#ifndef DEBUG_SALAR
-	#include <util/delay.h>
-#endif // DEBUG
-
-#ifdef DEBUG_SALAR
-	void _delay_ms(int time){}
-#endif // DEBUG
 
 typedef unsigned char byte;
 #define pin_A 0
@@ -44,20 +38,23 @@ int main(void)
 {
 	
 	analogBegin();
+	wBegin();
 	DDRB|=0b00000011;
 	PORTB|=0b00000011;
+
 	
-	//sei(); //глобальное разрешение прерываний
+	#ifndef DEBUG_SOLAR
+		digitalWrite(pin_A,0);
+		digitalWrite(pin_B,1);
+		delay(500);
+		digitalWrite(pin_A,1);
+		digitalWrite(pin_B,0);
+		delay(500);
+		digitalWrite(pin_A,0);
+		digitalWrite(pin_B,0);
+		delay(500);
+	#endif // DEBUG_SOLAR
 	
-	digitalWrite(pin_A,0);
-	digitalWrite(pin_B,1);
-	_delay_ms(500);
-	digitalWrite(pin_A,1);
-	digitalWrite(pin_B,0);
-	_delay_ms(500);
-	digitalWrite(pin_A,0);
-	digitalWrite(pin_B,0);
-	_delay_ms(2000);
 	while(1)
 	{
 	   int val1 = analogRead(2); 
